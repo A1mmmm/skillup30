@@ -1,0 +1,25 @@
+# Java
+/target/
+*.iml
+.idea/
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Spring Boot
+application-local.properties
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Others
+node_modules/

@@ -1,0 +1,319 @@
+.achievements-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.achievements-header {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #818cf8 100%);
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.achievements-tabs {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.achievements-tab {
+    padding: 0.8em 2em;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-accent);
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements-tab:hover {
+    background-color: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.achievements-tab.active {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.achievements-tab .badge {
+    margin-left: 8px;
+    background-color: white;
+    color: var(--color-accent);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    min-width: 20px;
+    display: inline-block;
+    animation: bounceIn 0.6s ease-out;
+}
+
+.achievements-tab.active .badge {
+    background-color: white;
+    color: var(--color-accent);
+}
+
+.achievements-tab:not(.active) .badge {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.achievements-progress {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #818cf8 100%);
+    color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.achievements-progress-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.achievements-progress-stat {
+    text-align: center;
+}
+
+.achievements-progress-stat .number {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+.achievements-progress-stat .label {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.achievement-card {
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: scale(1);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.achievement-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+}
+
+.achievement-card.earned {
+    opacity: 1;
+}
+
+.achievement-card.not-earned {
+    opacity: 0.7;
+}
+
+.achievement-card .badge-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #10b981;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    animation: bounceIn 0.6s ease-out;
+}
+
+.achievement-card .icon {
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.achievement-card .title {
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.achievement-card .description {
+    color: var(--color-text);
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.achievement-card .status {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    margin-top: 1rem;
+}
+
+.achievement-card .status.earned {
+    background-color: #10b981;
+    color: white;
+}
+
+.achievement-card .status.not-earned {
+    background-color: var(--color-border);
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.achievements-loading {
+    text-align: center;
+    padding: 3em;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.achievements-loading .icon {
+    font-size: 2em;
+    margin-bottom: 1em;
+    animation: pulse 2s infinite;
+}
+
+.achievements-empty {
+    text-align: center;
+    padding: 3em;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.achievements-empty .icon {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.achievements-empty .title {
+    margin-bottom: 0.5em;
+    color: var(--color-accent);
+}
+
+.achievements-empty .description {
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.achievements-auth-required {
+    text-align: center;
+    padding: 3em;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.achievements-auth-required .icon {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.achievements-auth-required .title {
+    margin-bottom: 0.5em;
+    color: var(--color-accent);
+}
+
+.achievements-auth-required .description {
+    color: var(--color-text);
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.achievements-auth-required .login-button {
+    padding: 0.8em 2em;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.achievements-auth-required .login-button:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .achievements-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .achievements-tab {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .achievements-progress-stats {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+} 

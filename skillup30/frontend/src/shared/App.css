@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 4em 1em 3em 1em;
+  background: none;
+}
+
+.hero-title {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5em;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.35em;
+  color: var(--color-accent);
+  margin-bottom: 2em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.hero-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  padding: 1em 2.5em;
+  font-size: 1.2em;
+  font-weight: 600;
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.12);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.hero-btn:hover {
+  background: var(--color-btn-hover);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.18);
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-subtitle {
+    font-size: 1em;
+  }
+
+  .hero {
+    padding: 2em 0.5em 2em 0.5em;
+  }
+}
